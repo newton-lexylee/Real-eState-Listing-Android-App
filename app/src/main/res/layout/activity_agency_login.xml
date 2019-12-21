@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoView">
+
+            <ImageView
+                android:id="@+id/logoView"
+                android:layout_height="95dp"
+                android:layout_marginTop="50dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_logo"
+                app:layout_widthPercent="60%" />
+
+            <TextView
+                android:id="@+id/infoView"
+                app:layout_widthPercent="60%"
+                android:layout_height="wrap_content"
+                android:text="ورود بنگاه معاملات مسکن"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/logoView"/>
+
+            <LinearLayout
+                android:id="@+id/form_container"
+                app:layout_widthPercent="60%"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/infoView"
+                >
+
+                <EditText
+                    android:id="@+id/agency_email_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="ایمیل"
+                    android:textColor="#5c5c5c"
+                    android:textColorHint="#ffffff"/>
+                <EditText
+                    android:id="@+id/agency_pass_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="textPassword"
+                    android:hint="رمز عبور"
+                    android:textColor="#5c5c5c"
+                    android:textColorHint="#ffffff"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="right|center_vertical"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:text="ورود به نرم افزار"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btnLogin"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="30dp"
+                        android:orientation="vertical"
+                        app:layout_widthPercent="60%">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </android.support.percent.PercentRelativeLayout>
+    </ScrollView>
+
+
+</LinearLayout>

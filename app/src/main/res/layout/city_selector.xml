@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        fontPath="fonts/AIranianSans.ttf"
+        android:text="انتخاب شهر مورد نظر"/>
+
+    <View
+        android:id="@+id/spacer1"
+        android:layout_below="@id/label"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+
+    <ProgressBar
+        android:id="@+id/pb_root"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"/>
+
+
+    <ir.hamsaa.RtlMaterialSpinner
+        android:id="@+id/province_sp"
+        android:layout_below="@+id/spacer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ms_hint="انتخاب شهر"
+        app:ms_enableFloatingLabel="false"
+        app:ms_highlightColor="@color/space_background_color"
+        app:ms_errorColor="@color/error_color"
+        app:ms_thickness="0dp"
+        app:ms_hintColor="@color/indigo"
+        app:ms_arrowSize="12dp"/>
+
+
+
+</RelativeLayout>

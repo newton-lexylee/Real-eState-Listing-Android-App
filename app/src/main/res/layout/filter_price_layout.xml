@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+
+
+    <LinearLayout
+        android:id="@+id/general_price_con"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:id="@+id/general_price_form_con"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <th.in.lordgift.widget.EditTextIntegerComma
+                    android:id="@+id/general_price_min"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="حداقل قیمت"
+                    android:maxLines="1"
+                    android:textSize="12sp"
+                    app:numberLength="10"
+                    android:theme="@style/EditTextTheme" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="تومان" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <th.in.lordgift.widget.EditTextIntegerComma
+                    android:id="@+id/general_price_max"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="حداکثر قیمت"
+                    android:maxLines="1"
+                    android:textSize="12sp"
+                    app:numberLength="10"
+                    android:theme="@style/EditTextTheme" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="تومان" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vadie_con"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+        android:background="#ffffff"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/insertorder_textsize"
+            android:text="ودیعه" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <th.in.lordgift.widget.EditTextIntegerComma
+                android:id="@+id/vadie_min"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="حداقل ودیعه"
+                android:maxLines="1"
+                android:textSize="12sp"
+                app:numberLength="10"
+                android:theme="@style/EditTextTheme"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="تومان" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <th.in.lordgift.widget.EditTextIntegerComma
+                android:id="@+id/vadie_max"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="حداکثر ودیعه"
+                android:maxLines="1"
+                android:textSize="12sp"
+                app:numberLength="10"
+                android:theme="@style/EditTextTheme"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="تومان" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ejareh_con"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+        android:background="#ffffff"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/insertorder_textsize"
+            android:text="اجاره" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <th.in.lordgift.widget.EditTextIntegerComma
+                android:id="@+id/ejareh_min"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="حداقل اجاره"
+                android:textColor="@color/black"
+                android:textSize="@dimen/insertorder_textsize"
+                android:maxLines="1"
+                app:numberLength="9"
+                android:theme="@style/EditTextTheme"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="تومان" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <th.in.lordgift.widget.EditTextIntegerComma
+                android:id="@+id/ejareh_max"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="حداکثر اجاره"
+                android:textColor="@color/black"
+                android:textSize="@dimen/insertorder_textsize"
+                android:maxLines="1"
+                app:numberLength="9"
+                android:theme="@style/EditTextTheme"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="تومان" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

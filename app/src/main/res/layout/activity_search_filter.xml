@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    app:theme="@style/AppTheme.NoActionBar"
+    tools:context="tmedia.ir.melkeurmia.seach.SearchFilterActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:theme="@style/AppTheme"  />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/apply_seach_btn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/filter_button_background"
+            android:text="اعمال فیلتر"
+            android:textColor="@color/White" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttons"
+        android:layout_below="@+id/appbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <com.sevenheaven.segmentcontrol.SegmentControl
+                android:id="@+id/segment_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layoutDirection="rtl"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:textSize="13sp"
+                app:cornerRadius="5dip"
+                app:horizonGap="14dip"
+                app:normalColor="#FFFFFF"
+                app:selectedColor="@color/colorAccent"
+                app:texts="جدیدترین|گرانترین|ارزانترین"
+                app:verticalGap="14dip" />
+
+
+            <RelativeLayout
+                android:id="@+id/thumb_selector_container"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:gravity="left"
+                    android:text="نمایش آگهی های عکس دار" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true">
+
+                    <Switch
+                        android:id="@+id/feature_image_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:checked="false"
+                        android:textOff="خیر"
+                        android:textOn="بله"
+                        app:theme="@style/swtich_style"
+                        tools:ignore="MissingPrefix"
+                        android:layout_alignParentRight="true" />
+
+                    <TextView
+                        android:id="@+id/switchBtn_txtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/feature_image_switch"
+                        android:gravity="center_horizontal"
+                        android:text="خیر" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/city_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="#ffffff"
+                android:paddingRight="15dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/insertorder_textsize"
+                    android:text="انتخاب مطنقه" />
+
+                <Button
+                    android:id="@+id/city_selector_btn"
+                    android:layout_width="wrap_content"
+                    android:padding="0dp"
+                    android:layout_marginTop="-7dip"
+                    android:layout_marginBottom="-7dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/category_button_bg"
+                    android:text="انتخاب"
+                    android:textColor="@color/White"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/category_selector_container"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right"
+                    android:gravity="left"
+                    android:text="انتخاب دسته بندی" />
+
+                <Button
+                    android:id="@+id/category_selector_btn"
+                    android:layout_width="wrap_content"
+                    android:padding="0dp"
+                    android:layout_marginTop="-7dip"
+                    android:layout_marginBottom="-7dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/category_button_bg"
+                    android:text="انتخاب"
+                    android:textColor="@color/White"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/general_filter_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/general_type_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right"
+                        android:gravity="left"
+                        android:text="نوع آگهی" />
+
+                    <RadioGroup
+                        android:id="@+id/general_type_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RadioButton
+                            android:id="@+id/general_type_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="فروشی" />
+
+                        <RadioButton
+                            android:id="@+id/general_type_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="درخواستی" />
+
+                        <RadioButton
+                            android:id="@+id/general_type_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="اجاره" />
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

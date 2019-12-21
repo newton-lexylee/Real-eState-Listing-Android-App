@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:compat="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_favorit"
+        android:title="علاقه مندی"
+        android:icon="@drawable/favorit_icon"
+        compat:showAsAction="collapseActionView|always"/>
+    <item android:id="@+id/action_share"
+        android:title="اشتراک"
+        android:icon="@drawable/share_icon"
+        compat:showAsAction="collapseActionView|always"/>
+
+</menu>

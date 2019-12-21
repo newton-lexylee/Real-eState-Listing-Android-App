@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/city_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="#ffffff"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/insertorder_textsize"
+                    android:text="انتخاب منطقه" />
+
+                <Button
+                    android:id="@+id/city_selector_btn"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selected_btn_bg"
+                    android:layout_weight="1"
+
+                    android:textColor="@color/white"
+                    android:padding="0dp"
+                    android:layout_marginTop="-7dip"
+                    android:layout_marginBottom="-7dip"
+                    android:text="انتخاب" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/category_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/insertorder_textsize"
+                    android:text="@string/insert_order_select_category" />
+
+                <Button
+                    android:id="@+id/category_selector_btn"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selected_btn_bg"
+                    android:textColor="@color/white"
+                    android:padding="0dp"
+                    android:layout_marginTop="-7dip"
+                    android:layout_marginBottom="-7dip"
+                    android:layout_weight="1"
+                    android:text="انتخاب" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/location_selector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/insertorder_textsize"
+                        android:text="انتخاب ناحیه" />
+
+                    <Button
+                        android:id="@+id/location_selector_btn"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selected_btn_bg"
+                        android:textColor="@color/white"
+                        android:padding="0dp"
+                        android:layout_marginTop="-7dip"
+                        android:layout_marginBottom="-7dip"
+                        android:layout_weight="1"
+                        android:text="انتخاب ناحیه" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:text="جهت بهتر دیده شدن آگهی، منطقه ملکی خود را انتخاب نمایید."/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/form_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/general_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/general_type_con"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="نوع آگهی"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/insertorder_textsize" />
+
+                            <Button
+                                android:id="@+id/general_type_btn"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="انتخاب کنید" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioGroup
+                                android:id="@+id/general_type_rg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/general_type_sell"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/red"
+                                    android:text="فروشی"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/general_type_request"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/red"
+                                    android:text="درخواستی"
+                                    android:textSize="12sp" />
+
+                                <RadioButton
+                                    android:id="@+id/general_type_ejare"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/red"
+                                    android:text="اجاره"
+                                    android:textSize="12sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/general_price_con"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/relativeLayout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/insertorder_textsize"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="قیمت"/>
+
+                            <Button
+                                android:id="@+id/general_price_type_btn"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="انتخاب کنید" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+
+                                <RadioGroup
+                                    android:id="@+id/general_price_rg"
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <RadioButton
+                                        android:id="@+id/general_price_maghtoo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/red"
+                                        android:textSize="12sp"
+                                        android:text="مقطوع"/>
+
+                                    <RadioButton
+                                        android:id="@+id/general_price_tavafoghi"
+                                        android:layout_width="match_parent"
+                                        android:buttonTint="@color/red"
+                                        android:textSize="12sp"
+                                        android:layout_height="wrap_content"
+                                        android:text="توافقی"/>
+
+                                    <RadioButton
+                                        android:id="@+id/general_price_moaveze"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/red"
+                                        android:text="معاوضه"
+                                        android:textSize="12sp" />
+                                </RadioGroup>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/general_price_form_con"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <th.in.lordgift.widget.EditTextIntegerComma
+                                    android:id="@+id/general_price"
+                                    android:layout_width="0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="@string/general_price_hint"
+                                    android:maxLines="1"
+                                    android:textSize="12sp"
+                                    app:numberLength="10"
+                                    android:theme="@style/EditTextTheme" />
+
+                                <TextView
+                                    android:layout_width="60dp"
+                                    android:layout_height="fill_parent"
+                                    android:gravity="center"
+                                    android:text="تومان" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/vadie_con"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="5dp"
+                        android:background="#ffffff"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/insertorder_textsize"
+                            android:text="ودیعه" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <th.in.lordgift.widget.EditTextIntegerComma
+                                android:id="@+id/vadie"
+                                android:hint="@string/amlak_vadieh_hint"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/insertorder_textsize"
+                                android:maxLines="1"
+                                app:numberLength="10"
+                                android:theme="@style/EditTextTheme"/>
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:text="تومان" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ejareh_con"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="5dp"
+                        android:background="#ffffff"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/insertorder_textsize"
+                            android:text="اجاره" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <th.in.lordgift.widget.EditTextIntegerComma
+                                android:id="@+id/ejareh"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/amlak_ejareh_hint"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/insertorder_textsize"
+                                android:maxLines="1"
+                                app:numberLength="10"
+                                android:theme="@style/EditTextTheme"/>
+
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:text="تومان" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/general_title_con"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/insertorder_textsize"
+                            android:text="عنوان آگهی" />
+
+
+                        <EditText
+                            android:id="@+id/general_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/general_title_hint"
+                            android:textSize="@dimen/insertorder_textsize"
+                            android:textColor="@color/black"
+                            android:maxLength="60"
+                            android:maxLines="1"
+                            android:inputType="text"
+                            android:theme="@style/EditTextTheme"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9e9e9e"
+                            android:textSize="12sp"
+                            android:text="اطلاعاتی شامل متراژ، محله و نوع آگهی را وارد نمایید."/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/general_tel_con"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/insertorder_textsize"
+                            android:text="موبایل" />
+
+                        <EditText
+                            android:id="@+id/general_tel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/general_tel_hint"
+                            android:inputType="number"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/insertorder_textsize"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:theme="@style/EditTextTheme" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/general_metraj_con"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/insertorder_textsize"
+                            android:text="متراژ" />
+                        <EditText
+                            android:id="@+id/general_metraj"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/general_metraj_hint"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/insertorder_textsize"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:theme="@style/EditTextTheme" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/general_otagh_con"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/insertorder_textsize"
+                            android:text="تعداد اتاق" />
+
+                        <EditText
+                            android:id="@+id/general_otagh"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/general_otagh_hint"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/insertorder_textsize"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:theme="@style/EditTextTheme"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/general_select_image_con"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="تصویر آگهی" />
+
+                        <Button
+                            android:id="@+id/general_select_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/general_select_image_text" />
+
+                        <HorizontalScrollView
+                            android:id="@+id/horizontalScrollView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="200dp"
+                            android:layout_alignParentBottom="true">
+
+                            <LinearLayout
+                                android:id="@+id/layoutListItemSelect"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal" />
+                        </HorizontalScrollView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9e9e9e"
+                            android:textSize="12sp"
+                            android:text="افزودن عکس بازدید آگهی شما را تا 3 برابر افزایش می دهد."/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/general_desc_con"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <EditText
+                            android:id="@+id/general_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|right"
+                            android:hint="@string/general_desc_hint"
+                            android:textSize="@dimen/insertorder_textsize"
+                            android:inputType="textMultiLine"
+                            android:lines="8"
+                            android:maxLength="1000"
+                            android:maxLines="10"
+                            android:minLines="6"
+                            android:scrollbars="vertical"
+                            android:theme="@style/EditTextTheme"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#9e9e9e"
+                            android:textSize="12sp"
+                            android:text="جزئیات و نکات قابل توجه آگهی خود را کامل و دقیق بنویسید."/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

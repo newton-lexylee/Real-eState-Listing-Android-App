@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="tmedia.ir.melkeurmia">
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:node="remove" />
+    <uses-sdk tools:overrideLibrary="android.support.constraint" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".AmlakMarket"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemNoBar">
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/AppThemNoBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppThemNoBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".InsertOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemNoBar" />
+        <activity
+            android:name="com.gun0912.tedpermission.TedPermissionActivity"
+            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|screenLayout|fontScale|uiMode|orientation|screenSize|layoutDirection"
+            android:theme="@style/Theme.Transparent.Permission" />
+        <activity
+            android:name=".seach.SearchFilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemNoBar" />
+        <activity
+            android:name=".myorders.MyOrdersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemNoBar" />
+        <activity
+            android:name=".itemView.ShowOrder"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemNoBar" />
+        <activity
+            android:name=".myorders.EditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemNoBar" />
+        <activity
+            android:name=".myorders.AboutUSActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemNoBar" />
+        <!--<provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.imagePicker.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>-->
+        <activity
+            android:name="com.linchaolong.android.imagepicker.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeToolbar" />
+        <activity
+            android:name=".myorders.ContactUSActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemNoBar" />
+        <activity
+            android:name=".insertorders.categoryselector.NewCategorySelector"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemNoBar" />
+        <activity
+            android:name=".MapLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemNoBar" />
+        <activity
+            android:name=".AgencyLogin"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity android:name=".itemView.FullScreenGallery" />
+        <activity android:name=".myorders.FavoritsActivity"></activity>
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.file_provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths"/>
+        </provider>
+    </application>
+</manifest>

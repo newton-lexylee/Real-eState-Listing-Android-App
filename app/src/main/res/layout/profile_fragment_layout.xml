@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="rtl">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/my_orders_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_btn_backgroun"
+                android:gravity="right"
+                android:drawableRight="@drawable/profile_icon_gray"
+                android:drawablePadding="15dp"
+                android:text="پروفایل من"/>
+            <Button
+                android:id="@+id/favorit_orders_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_btn_backgroun"
+                android:drawableRight="@drawable/favorit_icon"
+                android:drawablePadding="15dp"
+                android:gravity="right"
+                android:text="نشان شده ها"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey_200"/>
+
+            <Button
+                android:id="@+id/agency_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_btn_backgroun"
+                android:drawableRight="@drawable/agency_icon"
+                android:drawablePadding="15dp"
+                android:gravity="right"
+                android:text="ورود بنگاه مسکن"/>
+
+            <Button
+                android:id="@+id/about_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_btn_backgroun"
+                android:drawableRight="@drawable/about_icon"
+                android:drawablePadding="15dp"
+                android:gravity="right"
+                android:text="درباره ما"/>
+            <Button
+                android:id="@+id/contact_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_btn_backgroun"
+                android:drawableRight="@drawable/contact_icon"
+                android:drawablePadding="15dp"
+                android:gravity="right"
+                android:text="تماس با ما"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
